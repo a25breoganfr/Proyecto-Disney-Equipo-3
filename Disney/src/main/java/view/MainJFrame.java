@@ -119,6 +119,18 @@ public class MainJFrame extends javax.swing.JFrame {
         imageJLabel.setIcon(new ImageIcon(newImage));
 
     }
+
+    public JTextField getCharacterJTextField() {
+        return characterJTextField;
+    }
+
+    public void setCharacterJTextField(String character) {
+        this.characterJTextField.setText(character);
+    }
+    
+    public void addSearchJButtonActionListener(ActionListener al){
+        this.searchJButton.addActionListener(al);
+    }
     
     public void addSaveJButtonActionListener(ActionListener al){
         this.saveJButton.addActionListener(al);
