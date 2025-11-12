@@ -38,6 +38,7 @@ public class MainJFrame extends javax.swing.JFrame {
         registerJButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(204, 204, 255));
 
         imageJLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
@@ -133,6 +134,7 @@ public class MainJFrame extends javax.swing.JFrame {
     public void addRegisterJButtonActionListener(ActionListener al){
         this.registerJButton.addActionListener(al);
     }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton cancelJButton;

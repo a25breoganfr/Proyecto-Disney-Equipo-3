@@ -4,12 +4,15 @@
  */
 package controller;
 
+import controller.login.LoginController;
+import controller.register.RegisterController;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 import model.Usuario;
 import view.JFrameLogin;
+import view.JFrameRegistro;
 import view.MainJFrame;
 
 /**
@@ -26,7 +29,8 @@ public class FrontController {
         this.model = model;
         this.view.addSaveJButtonActionListener(this.getSaveJButtonActionListener());
         this.view.addCancelJButtonActionListener(this.getCancelJButtonActionListener());
-        this.view.addLoginJButtonActionListener(this.getLoginJButtonActionListener());        
+        this.view.addLoginJButtonActionListener(this.getLoginJButtonActionListener());   
+        this.view.addRegisterJButtonActionListener(this.getRegisterJButtonActionListener());
     }
 
 
@@ -58,7 +62,20 @@ public class FrontController {
         ActionListener al = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
-                JFrameLogin jf = new JFrameLogin(view, true);
+                JFrameLogin jfl = new JFrameLogin(view, true);
+                LoginController lg = new LoginController(jfl, model, FrontController.this);
+                jfl.setVisible(true);
+            }
+        };
+        return al;
+    }
+    public ActionListener getRegisterJButtonActionListener(){
+        ActionListener al = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                JFrameRegistro jfr = new JFrameRegistro(view, true);
+                RegisterController rg = new RegisterController(jfr, model, FrontController.this);
+                jfr.setVisible(true);
             
             }
         };

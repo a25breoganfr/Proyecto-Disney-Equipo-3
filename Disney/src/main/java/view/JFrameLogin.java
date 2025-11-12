@@ -19,12 +19,10 @@ public class JFrameLogin extends javax.swing.JFrame {
      * Creates new form JFrameLogin
      */
     public JFrameLogin(java.awt.Frame parent, boolean modal) {
-        //super(parent, modal);
         initComponents();
     }
 
     public JFrameLogin(java.awt.Dialog parent, boolean modal) {
-        //super(parent, modal);
         initComponents();
     }
 
