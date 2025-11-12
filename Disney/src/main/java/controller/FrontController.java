@@ -11,8 +11,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 import model.Usuario;
-import view.JFrameLogin;
-import view.JFrameRegistro;
+import view.JFrameLoginRegister;
 import view.MainJFrame;
 
 /**
@@ -62,7 +61,7 @@ public class FrontController {
         ActionListener al = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
-                JFrameLogin jfl = new JFrameLogin(view, true);
+                JFrameLoginRegister jfl = new JFrameLoginRegister(view, true);
                 LoginController lg = new LoginController(jfl, model, FrontController.this);
                 jfl.setVisible(true);
             }
@@ -73,7 +72,7 @@ public class FrontController {
         ActionListener al = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
-                JFrameRegistro jfr = new JFrameRegistro(view, true);
+                JFrameLoginRegister jfr = new JFrameLoginRegister(view, true);
                 RegisterController rg = new RegisterController(jfr, model, FrontController.this);
                 jfr.setVisible(true);
             

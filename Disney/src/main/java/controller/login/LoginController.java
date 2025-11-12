@@ -6,18 +6,18 @@ package controller.login;
 
 import controller.FrontController;
 import model.Usuario;
-import view.JFrameLogin;
+import view.JFrameLoginRegister;
 
 /**
  *
  * @author nerea
  */
 public class LoginController {
-    private JFrameLogin view;
+    private JFrameLoginRegister view;
     private Usuario model;
     private FrontController parentController;
 
-    public LoginController(JFrameLogin view, Usuario model, FrontController parentController) {
+    public LoginController(JFrameLoginRegister view, Usuario model, FrontController parentController) {
         this.view = view;
         this.model = model;
         this.parentController = parentController;

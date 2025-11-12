@@ -6,8 +6,7 @@ package controller.register;
 
 import controller.FrontController;
 import model.Usuario;
-import view.JFrameLogin;
-import view.JFrameRegistro;
+import view.JFrameLoginRegister;
 
 /**
  *
@@ -15,11 +14,11 @@ import view.JFrameRegistro;
  */
 public class RegisterController {
 
-    private JFrameRegistro view;
+    private JFrameLoginRegister view;
     private Usuario model;
     private FrontController parentController;
 
-    public RegisterController(JFrameRegistro view, Usuario model, FrontController parentController) {
+    public RegisterController(JFrameLoginRegister view, Usuario model, FrontController parentController) {
         this.view = view;
         this.model = model;
         this.parentController = parentController;
