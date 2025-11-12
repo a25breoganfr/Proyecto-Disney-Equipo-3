@@ -5,6 +5,7 @@
 package view;
 
 import java.awt.Frame;
+import java.awt.event.ActionListener;
 
 /**
  *
@@ -38,81 +39,136 @@ public class JFrameLoginRegister extends javax.swing.JFrame {
     private void initComponents() {
 
         loginRegisterJLabel = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        userJLabel = new javax.swing.JLabel();
+        passwordJLabel = new javax.swing.JLabel();
+        confirmedPasswordJLabel = new javax.swing.JLabel();
         userJTextField = new javax.swing.JTextField();
         passwordJTextField = new javax.swing.JTextField();
         confirmedPasswordJTextField = new javax.swing.JTextField();
+        loginJButton = new javax.swing.JButton();
+        registerJButton = new javax.swing.JButton();
+        cancelJButton = new javax.swing.JButton();
+        registerJLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        loginRegisterJLabel.setText("Login & Register");
+        loginRegisterJLabel.setText("Login ");
 
-        jLabel1.setText("User");
+        userJLabel.setText("User");
 
-        jLabel2.setText("Password");
+        passwordJLabel.setText("Password");
 
-        jLabel3.setText("Confirmed");
+        confirmedPasswordJLabel.setText("Confirmed");
+
+        loginJButton.setText("Login");
+
+        registerJButton.setText("Register");
+
+        cancelJButton.setText("Cancel");
+
+        registerJLabel.setText("Register");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(125, 125, 125)
-                        .addComponent(loginRegisterJLabel))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(confirmedPasswordJTextField))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel1))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(passwordJTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 228, Short.MAX_VALUE)
-                                    .addComponent(userJTextField))))))
+                        .addGap(109, 109, 109)
+                        .addComponent(loginRegisterJLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(registerJLabel))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(22, 22, 22)
+                            .addComponent(loginJButton)
+                            .addGap(18, 18, 18)
+                            .addComponent(registerJButton)
+                            .addGap(18, 18, 18)
+                            .addComponent(cancelJButton))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(confirmedPasswordJLabel)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(confirmedPasswordJTextField))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(passwordJLabel)
+                                .addComponent(userJLabel))
+                            .addGap(18, 18, 18)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(userJTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 228, Short.MAX_VALUE)
+                                .addComponent(passwordJTextField)))))
                 .addContainerGap(32, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(loginRegisterJLabel)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(loginRegisterJLabel)
+                    .addComponent(registerJLabel))
                 .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
+                    .addComponent(userJLabel)
                     .addComponent(userJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
+                    .addComponent(passwordJLabel)
                     .addComponent(passwordJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
+                    .addComponent(confirmedPasswordJLabel)
                     .addComponent(confirmedPasswordJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(133, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(loginJButton)
+                    .addComponent(registerJButton)
+                    .addComponent(cancelJButton))
+                .addGap(45, 45, 45))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-  
-
+    public void loginJButtonActionListener(ActionListener al){
+        this.loginJButton.addActionListener(al);
+    }
+    public void cancelJButtonActionListener(ActionListener al){
+        this.cancelJButton.addActionListener(al);
+    }
+    public void registerJButtonActionListener(ActionListener al){
+        this.registerJButton.addActionListener(al);
+    }
+    public void setVisibleRegisterJButton(Boolean enable){
+        this.registerJButton.setVisible(enable);
+    }
+    public void setVisibleLoginJButton(Boolean enable){
+        this.loginJButton.setVisible(enable);
+    }
+    public void setVisibleLabelLogin(Boolean enable){
+        this.loginRegisterJLabel.setVisible(enable);
+    }
+    public void setVisibleLableRegister(Boolean enable){
+        this.registerJLabel.setVisible(enable);
+    }
+    public void setVisibleLabelConfirmedPassword(Boolean enable){
+        this.confirmedPasswordJLabel.setVisible(enable);
+    }
+    public void setVisilePasswordJTextField(Boolean enable){
+        this.confirmedPasswordJTextField.setVisible(enable);
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton cancelJButton;
+    private javax.swing.JLabel confirmedPasswordJLabel;
     private javax.swing.JTextField confirmedPasswordJTextField;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JButton loginJButton;
     private javax.swing.JLabel loginRegisterJLabel;
+    private javax.swing.JLabel passwordJLabel;
     private javax.swing.JTextField passwordJTextField;
+    private javax.swing.JButton registerJButton;
+    private javax.swing.JLabel registerJLabel;
+    private javax.swing.JLabel userJLabel;
     private javax.swing.JTextField userJTextField;
     // End of variables declaration//GEN-END:variables
 }

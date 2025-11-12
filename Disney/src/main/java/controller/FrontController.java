@@ -4,7 +4,7 @@
  */
 package controller;
 
-import controller.login.LoginRegisterController;
+import controller.loginRegister.LoginRegisterController;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -61,8 +61,13 @@ public class FrontController {
             @Override
             public void actionPerformed(ActionEvent ae) {
                 JFrameLoginRegister jfl = new JFrameLoginRegister(view, true);
-                LoginRegisterController lrc = new LoginRegisterController(jfl, model, FrontController.this);
+                jfl.setVisibleRegisterJButton(Boolean.FALSE);
+                jfl.setVisibleLableRegister(Boolean.FALSE);
+                jfl.setVisibleLabelConfirmedPassword(Boolean.FALSE);
+                jfl.setVisilePasswordJTextField(Boolean.FALSE);
+                LoginRegisterController lg = new LoginRegisterController(jfl, model, FrontController.this);
                 jfl.setVisible(true);
+               
             }
         };
         return al;
@@ -72,9 +77,10 @@ public class FrontController {
             @Override
             public void actionPerformed(ActionEvent ae) {
                 JFrameLoginRegister jfr = new JFrameLoginRegister(view, true);
-                LoginRegisterController lrc = new LoginRegisterController(jfr, model, FrontController.this);
+                jfr.setVisibleLoginJButton(Boolean.FALSE);
+                jfr.setVisibleLabelLogin(Boolean.FALSE);
+                LoginRegisterController lg = new LoginRegisterController(jfr, model, FrontController.this);
                 jfr.setVisible(true);
-            
             }
         };
         return al;

@@ -38,7 +38,6 @@ public class MainJFrame extends javax.swing.JFrame {
         registerJButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(153, 153, 255));
 
         imageJLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
