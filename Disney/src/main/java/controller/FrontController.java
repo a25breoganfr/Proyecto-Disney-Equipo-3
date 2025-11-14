@@ -25,6 +25,7 @@ public class FrontController {
     public FrontController(MainJFrame view, Usuario model) {
         this.view = view;
         this.model = model;
+        this.view.addSearchJButtonActionListener(this.getSearchJButtonActionListener());
         this.view.addSaveJButtonActionListener(this.getSaveJButtonActionListener());
         this.view.addCancelJButtonActionListener(this.getCancelJButtonActionListener());
         this.view.addLoginJButtonActionListener(this.getLoginJButtonActionListener());   
@@ -42,6 +43,17 @@ public class FrontController {
             @Override
             public void actionPerformed(ActionEvent ae) {
                 System.out.println("SAVE");
+            }
+        };
+        return al;
+    }
+
+    public ActionListener getSearchJButtonActionListener(){
+        ActionListener al = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                System.out.println("Search");
+                //if(model.contains(view.getCharacterJTextField()))
             }
         };
         return al;
