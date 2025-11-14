@@ -120,8 +120,8 @@ public class MainJFrame extends javax.swing.JFrame {
 
     }
     
-    public void addSaveJButtonActionListener(ActionListener al){
-        this.saveJButton.addActionListener(al);
+    public void addAddJButtonActionListener(ActionListener al){
+        this.addJButton.addActionListener(al);
     }
     
     public void addCancelJButtonActionListener(ActionListener al){
