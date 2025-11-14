@@ -21,30 +21,13 @@ import java.io.FileWriter;
 import java.io.IOException;
 import model.CharacterInfo;
 import model.Characters;
+import model.User;
+import model.Users;
 
 public class UtilitiesDisney {
 
     public static void LinkAPI() throws Exception {
 
-      /*  HttpClient client = HttpClient.newHttpClient();
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("https://api.disneyapi.dev/character"))
-                .build();
-
-        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-
-        JsonObject json = JsonParser.parseString(response.body()).getAsJsonObject();
-
-        JsonArray dataArray = json.getAsJsonArray("data");
-        
-        for(int i = 0; i<49; i++){
-            JsonObject firstCharacter = dataArray.get(i).getAsJsonObject();
-            System.out.println("🔹 ID: " + firstCharacter.get("_id").getAsString());
-        }
-
-        
-        */
-      
         //Linkeo la API
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
@@ -57,30 +40,30 @@ public class UtilitiesDisney {
         Characters disneyCharacters = gson.fromJson(response.body(), Characters.class);
         CharacterInfo[] personajes = disneyCharacters.data;
 
-        //Imprimo la informacion de los personajes
+        /*Imprimo la informacion de los personajes
         System.out.println("Personajes obtenidos de la API: \n");
         for (CharacterInfo p : personajes) {
             System.out.println("ID: " + p._id);
             System.out.println("Nombre: " + p.name);
             System.out.println("Peliculas: " + p.films);
             System.out.println("Cortos: " + p.shortFilms);
-            System.out.println("Series: " + p.tvShow);
-            System.out.println("Juegos: " + p.videogames);
-            System.out.println("Atracciones: " + p.parkAtractions);
+            System.out.println("Series: " + p.tvShows);
+            System.out.println("Juegos: " + p.videoGames);
+            System.out.println("Atracciones: " + p.parkAttractions);
             System.out.println("Aliados: " + p.allies);
             System.out.println("Enemigos: " + p.enemies);
             
-        }
-
+        }*/
         //Guardo los personajes
         saveInfo(personajes);
 
     }
-	//Metodo para guardar personajes
+
+    //Metodo para guardar personajes
     private static void saveInfo(CharacterInfo[] personajes) throws IOException {
 
         Gson gson = new Gson();
-               
+
         //Creo el archivo personajesDisney.json y escribo el contenido
         FileWriter fw = new FileWriter("personajesDisney.json");
         gson.toJson(personajes, fw);
@@ -88,7 +71,27 @@ public class UtilitiesDisney {
 
         System.out.println("Archivo guardado");
 
-      
+    }
+    //WIP
+   /* public static CharacterInfo getCharacterByName(String name){
+        if( == null) return null;
+        for(CharacterInfo c : ){
+            if(c.getName().equalsIgnoreCase(name)) return c;
+        }
+        return null;
+    }*/
+
+    
+    //Metodo para guardar usuarios
+    public static void UsersJson(Users[] user) throws IOException {
+
+        Users users = new Users();
+        users.addUser(new User());
+        Gson gson = new Gson();
+        FileWriter fw = new FileWriter("usuarios.json");
+        gson.toJson(users, fw);
+        fw.close();
+
     }
 
 }
