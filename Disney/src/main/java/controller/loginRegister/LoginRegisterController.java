@@ -7,19 +7,19 @@ package controller.loginRegister;
 import controller.FrontController;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import model.User;
-import view.JFrameLoginRegister;
+import model.Usuario;
+import view.LoginRegisterJDialog;
 
 /**
  *
  * @author nerea
  */
 public class LoginRegisterController {
-    private JFrameLoginRegister view;
-    private User model;
+    private LoginRegisterJDialog view;
+    private Usuario model;
     private FrontController parentController;
 
-    public LoginRegisterController(JFrameLoginRegister view, User model, FrontController parentController) {
+    public LoginRegisterController(LoginRegisterJDialog view, Usuario model, FrontController parentController) {
         this.view = view;
         this.model = model;
         this.parentController = parentController;

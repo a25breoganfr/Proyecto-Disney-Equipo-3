@@ -9,8 +9,8 @@ import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
-import model.User;
-import view.JFrameLoginRegister;
+import model.Usuario;
+import view.LoginRegisterJDialog;
 import view.MainJFrame;
 
 /**
@@ -20,12 +20,11 @@ import view.MainJFrame;
 public class FrontController {
 
     private MainJFrame view;
-    private User model;
+    private Usuario model;
 
-    public FrontController(MainJFrame view, User model) {
+    public FrontController(MainJFrame view, Usuario model) {
         this.view = view;
         this.model = model;
-        this.view.addSearchJButtonActionListener(this.getSearchJButtonActionListener());
         this.view.addSaveJButtonActionListener(this.getSaveJButtonActionListener());
         this.view.addCancelJButtonActionListener(this.getCancelJButtonActionListener());
         this.view.addLoginJButtonActionListener(this.getLoginJButtonActionListener());   
@@ -47,17 +46,6 @@ public class FrontController {
         };
         return al;
     }
-
-    public ActionListener getSearchJButtonActionListener(){
-        ActionListener al = new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent ae) {
-                System.out.println("Search");
-                //if(model.contains(view.getCharacterJTextField()))
-            }
-        };
-        return al;
-    }
     
     public ActionListener getCancelJButtonActionListener(){
         ActionListener al = new ActionListener() {
@@ -72,7 +60,7 @@ public class FrontController {
         ActionListener al = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
-                JFrameLoginRegister jfl = new JFrameLoginRegister(view, true);
+                LoginRegisterJDialog jfl = new LoginRegisterJDialog(view, true);
                 jfl.setVisibleRegisterJButton(Boolean.FALSE);
                 jfl.setVisibleLableRegister(Boolean.FALSE);
                 jfl.setVisibleLabelConfirmedPassword(Boolean.FALSE);
@@ -88,7 +76,7 @@ public class FrontController {
         ActionListener al = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
-                JFrameLoginRegister jfr = new JFrameLoginRegister(view, true);
+                LoginRegisterJDialog jfr = new LoginRegisterJDialog(view, true);
                 jfr.setVisibleLoginJButton(Boolean.FALSE);
                 jfr.setVisibleLabelLogin(Boolean.FALSE);
                 LoginRegisterController lg = new LoginRegisterController(jfr, model, FrontController.this);
