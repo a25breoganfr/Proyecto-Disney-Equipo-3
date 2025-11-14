@@ -16,24 +16,14 @@ public class CharacterInfo {
     public String name;
     public List<String> films;
     public List<String> shortFilms;
-    public List<String> tvShow;
-    public List<String> videogames;
-    public List<String> parkAtractions;
+    public List<String> tvShows;
+    public List<String> videoGames;
+    public List<String> parkAttractions;
     public List<String> allies;
     public List<String> enemies;
+    public String imageUrl;
 
-
-    public CharacterInfo(String _id, String name, List<String> films, List<String> shortFilms, List<String> tvShow, List<String> videogames, List<String> parkAtractions, List<String> allies, List<String> enemies) {
-        this._id = _id;
-        this.name = name;
-        this.films = films;
-        this.shortFilms = shortFilms;
-        this.tvShow = tvShow;
-        this.videogames = videogames;
-        this.parkAtractions = parkAtractions;
-        this.allies = allies;
-        this.enemies = enemies;
-    }
+    public CharacterInfo() {}
 
     public String getId() {
         return _id;
@@ -67,28 +57,28 @@ public class CharacterInfo {
         this.shortFilms = shortFilms;
     }
 
-    public List<String> getTvShow() {
-        return tvShow;
+    public List<String> getTvShows() {
+        return tvShows;
     }
 
-    public void setTvShow(List<String> tvShow) {
-        this.tvShow = tvShow;
+    public void setTvShows(List<String> tvShows) {
+        this.tvShows = tvShows;
     }
 
-    public List<String> getVideogames() {
-        return videogames;
+    public List<String> getVideoGames() {
+        return videoGames;
     }
 
-    public void setVideogames(List<String> videogames) {
-        this.videogames = videogames;
+    public void setVideoGames(List<String> videoGames) {
+        this.videoGames = videoGames;
     }
 
-    public List<String> getParkAtractions() {
-        return parkAtractions;
+    public List<String> getParkAttractions() {
+        return parkAttractions;
     }
 
-    public void setParkAtractions(List<String> parkAtractions) {
-        this.parkAtractions = parkAtractions;
+    public void setParkAttractions(List<String> parkAttractions) {
+        this.parkAttractions = parkAttractions;
     }
 
     public List<String> getAllies() {
@@ -106,6 +96,16 @@ public class CharacterInfo {
     public void setEnemies(List<String> enemies) {
         this.enemies = enemies;
     }
- 
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
 }
+
+
 
