@@ -9,7 +9,7 @@ import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
-import model.Usuario;
+import model.User;
 import view.JFrameLoginRegister;
 import view.MainJFrame;
 
@@ -20,9 +20,9 @@ import view.MainJFrame;
 public class FrontController {
 
     private MainJFrame view;
-    private Usuario model;
+    private User model;
 
-    public FrontController(MainJFrame view, Usuario model) {
+    public FrontController(MainJFrame view, User model) {
         this.view = view;
         this.model = model;
         this.view.addSearchJButtonActionListener(this.getSearchJButtonActionListener());
