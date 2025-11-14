@@ -3,11 +3,11 @@
  */
 package main;
 
-import main.UtilidadesDisney;
-import static main.UtilidadesDisney.LinkAPI;
+import main.UtilitiesDisney;
+import static main.UtilitiesDisney.LinkAPI;
 import model.CharacterInfo;
 import controller.FrontController;
-import model.Usuario;
+import model.User;
 import view.MainJFrame;
 
 /**
@@ -18,10 +18,10 @@ public class Disney {
 
     public static void main(String[] args) throws Exception {
        
-        UtilidadesDisney.LinkAPI();
+        UtilitiesDisney.LinkAPI();
         MainJFrame mainJFrame = new MainJFrame();
         mainJFrame.setVisible(true);
-        Usuario model = new Usuario();
+        User model = new User);
         FrontController fc = new FrontController(mainJFrame, model);
         fc.changeImage();
 
