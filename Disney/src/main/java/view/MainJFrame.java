@@ -7,6 +7,8 @@ package view;
 import java.awt.Image;
 import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
 
 /**
  *
@@ -32,16 +34,25 @@ public class MainJFrame extends javax.swing.JFrame {
 
         imageJLabel = new javax.swing.JLabel();
         characterJTextField = new javax.swing.JTextField();
-        saveJButton = new javax.swing.JButton();
+        addJButton = new javax.swing.JButton();
         cancelJButton = new javax.swing.JButton();
         loginJButton = new javax.swing.JButton();
         registerJButton = new javax.swing.JButton();
+        searchJButton = new javax.swing.JButton();
+        nameLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(204, 204, 255));
+        setMaximumSize(new java.awt.Dimension(552, 358));
 
         imageJLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
-        saveJButton.setText("Save");
+        addJButton.setText("Add");
+        addJButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addJButtonActionPerformed(evt);
+            }
+        });
 
         cancelJButton.setText("Cancel");
         cancelJButton.addActionListener(new java.awt.event.ActionListener() {
@@ -54,32 +65,42 @@ public class MainJFrame extends javax.swing.JFrame {
 
         registerJButton.setText("Register");
 
+        searchJButton.setText("Search");
+        searchJButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchJButtonActionPerformed(evt);
+            }
+        });
+
+        nameLabel.setPreferredSize(new java.awt.Dimension(200, 20));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(74, Short.MAX_VALUE)
+                .addContainerGap(87, Short.MAX_VALUE)
                 .addComponent(imageJLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 359, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(109, 109, 109))
             .addGroup(layout.createSequentialGroup()
+                .addGap(107, 107, 107)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(98, 98, 98)
-                        .addComponent(characterJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(45, 45, 45))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(loginJButton)
-                        .addGap(36, 36, 36)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(loginJButton)
+                            .addComponent(characterJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(60, 60, 60)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(registerJButton, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(addJButton)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(searchJButton)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(cancelJButton)))))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(saveJButton)
-                        .addGap(18, 18, 18)
-                        .addComponent(cancelJButton))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addComponent(registerJButton)))
+                        .addGap(54, 54, 54)
+                        .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -90,9 +111,13 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(characterJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(saveJButton)
-                    .addComponent(cancelJButton))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 126, Short.MAX_VALUE)
+                    .addComponent(cancelJButton)
+                    .addComponent(searchJButton))
+                .addGap(29, 29, 29)
+                .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(38, 38, 38)
+                .addComponent(addJButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 160, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(loginJButton)
                     .addComponent(registerJButton))
@@ -105,6 +130,14 @@ public class MainJFrame extends javax.swing.JFrame {
     private void cancelJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelJButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cancelJButtonActionPerformed
+
+    private void searchJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchJButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_searchJButtonActionPerformed
+
+    private void addJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addJButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addJButtonActionPerformed
 
     public void setTamanhoImage(int width, int height) {
         imageJLabel.setSize(width, height);
@@ -123,11 +156,23 @@ public class MainJFrame extends javax.swing.JFrame {
     public String getCharacterJTextField() {
         return characterJTextField.toString();
     }
+
+    public void setNameLabel(String name) {
+        this.nameLabel.setText(name);
+    }
+
     
-    public void addAddJButtonActionListener(ActionListener al){
-        this.addJButton.addActionListener(al);
+    
+    public void setCharacterJTextField(String character) {
+        this.characterJTextField.setText(character);
     }
     
+    public void addSearchJButtonActionListener(ActionListener al){
+        this.searchJButton.addActionListener(al);
+    }
+    public void addSaveJButtonActionListener(ActionListener al){
+        this.addJButton.addActionListener(al);
+    }
     public void addCancelJButtonActionListener(ActionListener al){
         this.cancelJButton.addActionListener(al);
     }
@@ -137,14 +182,15 @@ public class MainJFrame extends javax.swing.JFrame {
     public void addRegisterJButtonActionListener(ActionListener al){
         this.registerJButton.addActionListener(al);
     }
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton addJButton;
     private javax.swing.JButton cancelJButton;
     private javax.swing.JTextField characterJTextField;
     private javax.swing.JLabel imageJLabel;
     private javax.swing.JButton loginJButton;
+    private javax.swing.JLabel nameLabel;
     private javax.swing.JButton registerJButton;
-    private javax.swing.JButton saveJButton;
+    private javax.swing.JButton searchJButton;
     // End of variables declaration//GEN-END:variables
 }
