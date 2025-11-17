@@ -184,6 +184,32 @@ public class MainJFrame extends javax.swing.JFrame {
         this.characterJTextField.setText(character);
     }
 
+    public void setImagePanel(String imageUrl) {
+        try {
+
+            ImageIcon icon = new ImageIcon(new java.net.URL(imageUrl));
+
+            Image img = icon.getImage().getScaledInstance(
+                    imagePanel.getWidth(), 
+                    imagePanel.getHeight(), 
+                    Image.SCALE_SMOOTH
+            );
+            icon = new ImageIcon(img);
+
+            imagePanel.removeAll();
+
+            JLabel imgLabel = new JLabel(icon);
+            imagePanel.add(imgLabel);
+
+            imagePanel.revalidate();
+            imagePanel.repaint();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Error loading image: " + imageUrl);
+        }
+    }
+    
     public void addSearchJButtonActionListener(ActionListener al) {
         this.searchJButton.addActionListener(al);
     }
