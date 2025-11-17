@@ -10,6 +10,14 @@ package model;
  */
 public class Characters {
     
-    public CharacterInfo[] data;
+   public CharacterInfo[] personajes;
+
+    public Characters(CharacterInfo[] personajes) {
+        this.personajes = personajes;
+    }
+
+    public CharacterInfo[] getPersonajes() {
+        return personajes;
+    }
     
 }
