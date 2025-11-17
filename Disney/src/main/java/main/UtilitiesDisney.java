@@ -26,6 +26,8 @@ import model.Users;
 
 public class UtilitiesDisney {
 
+    public static  CharacterInfo[] personajes;
+
     public static void LinkAPI() throws Exception {
 
         //Linkeo la API
@@ -38,7 +40,7 @@ public class UtilitiesDisney {
         //Creo objeto GSON
         Gson gson = new Gson();
         Characters disneyCharacters = gson.fromJson(response.body(), Characters.class);
-        CharacterInfo[] personajes = disneyCharacters.data;
+        personajes = disneyCharacters.data;
 
         /*Imprimo la informacion de los personajes
         System.out.println("Personajes obtenidos de la API: \n");
@@ -74,8 +76,8 @@ public class UtilitiesDisney {
     }
     //WIP
    /* public static CharacterInfo getCharacterByName(String name){
-        if( == null) return null;
-        for(CharacterInfo c : ){
+        if( personajes == null) return null;
+        for(CharacterInfo c : personajes){
             if(c.getName().equalsIgnoreCase(name)) return c;
         }
         return null;
