@@ -40,9 +40,14 @@ public class MainJFrame extends javax.swing.JFrame {
         registerJButton = new javax.swing.JButton();
         searchJButton = new javax.swing.JButton();
         nameLabel = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        listFilmsTextArea = new javax.swing.JTextArea();
+        imageCharacterJLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(204, 204, 255));
+        setAlwaysOnTop(true);
+        setBackground(new java.awt.Color(102, 204, 255));
+        setForeground(new java.awt.Color(102, 153, 255));
         setMaximumSize(new java.awt.Dimension(552, 358));
 
         imageJLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -74,14 +79,23 @@ public class MainJFrame extends javax.swing.JFrame {
 
         nameLabel.setPreferredSize(new java.awt.Dimension(200, 20));
 
+        listFilmsTextArea.setColumns(20);
+        listFilmsTextArea.setRows(5);
+        jScrollPane2.setViewportView(listFilmsTextArea);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(87, Short.MAX_VALUE)
-                .addComponent(imageJLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 359, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(109, 109, 109))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(imageJLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 359, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(109, 109, 109))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(173, 173, 173))))
             .addGroup(layout.createSequentialGroup()
                 .addGap(107, 107, 107)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -92,16 +106,18 @@ public class MainJFrame extends javax.swing.JFrame {
                         .addGap(60, 60, 60)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(registerJButton, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(addJButton)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(searchJButton)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(cancelJButton)))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(searchJButton)
+                                .addGap(18, 18, 18)
+                                .addComponent(cancelJButton)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                        .addComponent(addJButton)
+                        .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(54, 54, 54)
-                        .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(imageCharacterJLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(51, 51, 51))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -112,12 +128,15 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(characterJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cancelJButton)
-                    .addComponent(searchJButton))
-                .addGap(29, 29, 29)
+                    .addComponent(searchJButton)
+                    .addComponent(addJButton))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38)
-                .addComponent(addJButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 160, Short.MAX_VALUE)
+                .addGap(29, 29, 29)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE)
+                    .addComponent(imageCharacterJLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(loginJButton)
                     .addComponent(registerJButton))
@@ -154,40 +173,49 @@ public class MainJFrame extends javax.swing.JFrame {
     }
 
     public String getCharacterJTextField() {
-        return characterJTextField.toString();
+        return characterJTextField.getText().trim();
     }
 
     public void setNameLabel(String name) {
         this.nameLabel.setText(name);
     }
 
-    
-    
     public void setCharacterJTextField(String character) {
         this.characterJTextField.setText(character);
     }
-    
-    public void addSearchJButtonActionListener(ActionListener al){
+
+    public void addSearchJButtonActionListener(ActionListener al) {
         this.searchJButton.addActionListener(al);
     }
-    public void addSaveJButtonActionListener(ActionListener al){
+
+    public void addJButtonActionListener(ActionListener al) {
         this.addJButton.addActionListener(al);
     }
-    public void addCancelJButtonActionListener(ActionListener al){
+
+    public void addCancelJButtonActionListener(ActionListener al) {
         this.cancelJButton.addActionListener(al);
     }
-    public void addLoginJButtonActionListener(ActionListener al){
+
+    public void addLoginJButtonActionListener(ActionListener al) {
         this.loginJButton.addActionListener(al);
     }
-    public void addRegisterJButtonActionListener(ActionListener al){
+
+    public void addRegisterJButtonActionListener(ActionListener al) {
         this.registerJButton.addActionListener(al);
+    }
+    
+    public void setImageCharacter(String url){
+        this.imageCharacterJLabel.setText(url);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addJButton;
     private javax.swing.JButton cancelJButton;
     private javax.swing.JTextField characterJTextField;
+    private javax.swing.JLabel imageCharacterJLabel;
     private javax.swing.JLabel imageJLabel;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextArea listFilmsTextArea;
     private javax.swing.JButton loginJButton;
     private javax.swing.JLabel nameLabel;
     private javax.swing.JButton registerJButton;
