@@ -21,10 +21,13 @@ public class FrontController {
 
     private MainJFrame view;
     private Usuario model;
+    private CharacterInfo modelInfo;
 
-    public FrontController(MainJFrame view, Usuario model) {
+    public FrontController(MainJFrame view, Usuario model, CharacterInfo modelInfo) {
         this.view = view;
         this.model = model;
+        this.modelInfo = modelInfo;
+        this.view.addSearchJButtonActionListener(this.getSearchJButtonActionListener());
         this.view.addSaveJButtonActionListener(this.getSaveJButtonActionListener());
         this.view.addCancelJButtonActionListener(this.getCancelJButtonActionListener());
         this.view.addLoginJButtonActionListener(this.getLoginJButtonActionListener());   
