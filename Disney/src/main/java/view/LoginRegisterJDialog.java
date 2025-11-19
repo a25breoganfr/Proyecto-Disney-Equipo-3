@@ -123,8 +123,32 @@ public class LoginRegisterJDialog extends javax.swing.JDialog {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    public String getConfirmedPasswordJTextField() {
+        return confirmedPasswordJTextField.getText();
+    }
+
+    public void setConfirmedPasswordJTextField(String confirmedPass) {
+        this.confirmedPasswordJTextField.setText(confirmedPass);
+    }
+
+    public String getPasswordJTextField() {
+        return passwordJTextField.getText();
+    }
+
+    public void setPasswordJTextField(String password) {
+        this.passwordJTextField.setText(password);
+    }
+
+    public String getUserJTextField() {
+        return userJTextField.getText();
+    }
+
+    public void setUserJTextField(String user) {
+        this.userJTextField.setText(user);
+    }
     
-       public void loginJButtonActionListener(ActionListener al){
+    public void loginJButtonActionListener(ActionListener al){
         this.loginJButton.addActionListener(al);
     }
     public void cancelJButtonActionListener(ActionListener al){
