@@ -23,4 +23,5 @@ Se ha utilizado la aplicación [Postman](https://www.postman.com/) para poder vi
 - **IDE**: Para el desarrollo de la aplicación hemos utilizado el IDE NetBeans.
 
 ## Manual de Usuario
-Al abrir la apliación se nos mostrará una ventana tal y como dejo a continuación 
+Al abrir la apliación se nos mostrará una ventana tal y como dejo a continuación
+ ![Peticion1](/imagenes/mainJFrame.jpg)
