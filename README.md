@@ -32,3 +32,5 @@ Una vez dentro, el usuario deberá introducir el nombre del personaje, una vez l
 ![Peticion1](/imagenes/character.jpg)
  
 Si por error el usuario introduce un personaje que no existe, la aplicación mostrará dicho error.
+
+![Peticion1](/imagenes/noExiste.jpg)
