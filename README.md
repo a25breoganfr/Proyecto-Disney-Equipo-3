@@ -36,3 +36,9 @@ Si por error el usuario introduce un personaje que no existe, la aplicación mos
 ![Peticion1](/imagenes/noExiste.jpg)
 
 Para poder añadir una película el usuario debe estar registrado, podrá hacerlo dandole al botón "Register" donde se le abrirá la siguiente ventana
+
+![Peticion1](/imagenes/register.jpg)
+
+Una vez registrado el usuario deverá introducir sus credenciales en la pestaña de "login", para poder llegar allí deberá darle al botón correspondiente.
+
+![Peticion1](/imagenes/login.jpg)
