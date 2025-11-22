@@ -22,6 +22,12 @@ Se ha utilizado la aplicación [Postman](https://www.postman.com/) para poder vi
 - **Interfaz**: El proyecto está realizado con una interfaz gráfica implementada, usando el modelo MVC, modelo, vista y controlador de Swing.
 - **IDE**: Para el desarrollo de la aplicación hemos utilizado el IDE NetBeans.
 
-## Manual de Usuario
+## Manual de Usuario 
 Al abrir la apliación se nos mostrará una ventana tal y como dejo a continuación
+
  ![Peticion1](/imagenes/mainJFrame.jpg)
+
+Una vez dentro, el usuario deberá introducir el nombre del personaje, una vez le de al botón "Search" se mostrará automáticamente el nombre, la imagen y el listado de películas
+
+
+ 
