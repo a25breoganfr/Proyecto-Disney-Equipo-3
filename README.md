@@ -59,19 +59,19 @@ En la aplicación implementamos diferentes mensajes para indicarle al usuario si
 
 ### Ventana Login
 
-#### Registrar para añadir películas
+### Registrar para añadir películas
 La aplicación permite consultar la información de las películas sin estar resgistrado, sin embargo, a la hora de añadir deberá estar logueando, sino le saldrá un mensaje aclarando.
 
 ![Peticion1](/imagenes/registrarParaPeliculas.jpg)
 
 Dentro de las vista para poder escribir las credenciales implementamos una serie de mensajes para ayudar al usuario:
 
-##### Campos vacíos en login
+### Campos vacíos en login
 Si el usuario no escribe ninguna credencial y presiona el botón para loguearse aparecerá un mensaje como el que dejamos a continuación.
 
 ![Peticion1](/imagenes/camposVaciosLogin.jpg)
 
-#### Usuario o contraseña incorrectos
+### Usuario o contraseña incorrectos
 Si por error el usuario introduce mal el nombre de usuario o la contraseña se le comunicará de la siguiente forma.
 
 ![Peticion1](/imagenes/loginIncorrecto.jpg)
