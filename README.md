@@ -14,7 +14,7 @@ __________________________
         - [Campos vacíos en Register](#Campos-vacíos-en-Register)
         - [Usuario ya logueado](Usuario-ya-logueado)
         - [Contraseñas no coinciden](#Contraseñas-no-coinciden)
-        - [Añadir personaje](#Añadir-personaje)
+        - [Añadir película](#Añadir-película)
         - [Película vacía](#Película-vacía)
  
   
@@ -93,7 +93,7 @@ El usuario una vez introduce la contraseña para confirmarla y le presiona el bo
 
 ![Peticion1](/imagenes/contraseñasNoCoinciden.jpg)
 
-## Añadir personaje
+## Añadir película
 Una vez estemos registrados y logueados, si queremos añadir una películas primero debemos introducir el nombre del personaje, si no aparecerá el siguiente error.
 
 ![Peticion1](/imagenes/personajeVacio.jpg)
