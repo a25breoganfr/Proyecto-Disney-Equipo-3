@@ -6,8 +6,10 @@ __________________________
 - [Manual técnico](#manual-técnico)
 - [Manual de Usuario](#manual-de-usuario)
   - [Manejo de Errores](#manejo-de-errores)
-      - [Registrar para añadir películas](#registrar-para-añadir-películas)
-      - [Campos vacíos en Login](#campos-vacíos-en-login)
+      - [Ventana Login](#ventana-login)
+          - [Registrar para añadir películas](#registrar-para-añadir-películas)
+          - [Campos vacíos en Login](#campos-vacíos-en-login)
+          - [Usuario o contraseña incorrectos](#Usuario-o-contraseña-incorrectos)
  
 
 
@@ -49,22 +51,26 @@ Una vez registrado el usuario deverá introducir sus credenciales en la pestaña
 ### Manejo de errores
 En la aplicación implementamos diferentes mensajes para indicarle al usuario si está haciendo algo mal, para poder hacer la interfaz más interactiva y entendible.
 
-### Registrar para añadir películas
+### Ventana Login
+
+#### Registrar para añadir películas
 La aplicación permite consultar la información de las películas sin estar resgistrado, sin embargo, a la hora de añadir deberá estar logueando, sino le saldrá un mensaje aclarando.
 
 ![Peticion1](/imagenes/registrarParaPeliculas.jpg)
 
 Dentro de las vista para poder escribir las credenciales implementamos una serie de mensajes para ayudar al usuario:
 
-#### Campos vacíos en login
+##### Campos vacíos en login
 Si el usuario no escribe ninguna credencial y presiona el botón para loguearse aparecerá un mensaje como el que dejamos a continuación.
 
 ![Peticion1](/imagenes/camposVaciosLogin.jpg)
 
-### Usuario o contraseña incorrectos
+#### Usuario o contraseña incorrectos
 Si por error el usuario introduce mal el nombre de usuario o la contraseña se le comunicará de la siguiente forma.
 
 ![Peticion1](/imagenes/loginIncorrecto.jpg)
+
+### Ventana Register
 
 
 
