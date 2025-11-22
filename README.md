@@ -12,3 +12,4 @@ Esta es una aplicación que permite buscar el nombre de un personaje Disney. Una
 ### Postman
 Se ha utilizado la aplicación [Postman] para poder comprobar las diferentes API disponibles. A continuación dejamos una imagen: 
 
+ ![Peticion1](/imagenes/postman.jpg)
