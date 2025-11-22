@@ -4,6 +4,7 @@ __________________________
 - [Introducción](#introducción)
   - [Postman](#postman) 
 - [Manual técnico](#manual-técnico)
+- [Manual de Usuario](#manual-de-usuario)
  
 
 
@@ -20,3 +21,5 @@ Se ha utilizado la aplicación [Postman](https://www.postman.com/) para poder vi
 - **Java SE 17 o superior**: El proyecto está desarrollado con Java 17 por lo que deberías tener instalada esta versión o una superior.
 - **Interfaz**: El proyecto está realizado con una interfaz gráfica implementada, usando el modelo MVC, modelo, vista y controlador de Swing.
 - **IDE**: Para el desarrollo de la aplicación hemos utilizado el IDE NetBeans.
+
+## Manual de Usuario
