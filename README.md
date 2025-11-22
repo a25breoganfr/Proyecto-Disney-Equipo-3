@@ -7,7 +7,7 @@ __________________________
 - [Manual de Usuario](#manual-de-usuario)
   - [Manejo de Errores](#manejo-de-errores)
       - [Registrar para añadir películas](#registrar-para-añadir-películas)
-      - [Campos vacío en Login](#campos-vacíos-en-login)
+      - [Campos vacíos en Login](#campos-vacíos-en-login)
  
 
 
@@ -56,7 +56,7 @@ La aplicación permite consultar la información de las películas sin estar res
 
 Dentro de las vista para poder escribir las credenciales implementamos una serie de mensajes para ayudar al usuario:
 
-#### Campos vacios en login
+#### Campos vacíos en login
 Si el usuario no escribe ninguna credencial y presiona el botón para loguearse aparecerá un mensaje como el que dejamos a continuación.
 
 ![Peticion1](/imagenes/camposVaciosLogin.jpg)
