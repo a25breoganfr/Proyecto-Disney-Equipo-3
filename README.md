@@ -99,7 +99,7 @@ Una vez estemos registrados y logueados, si queremos añadir una películas prim
 ![Peticion1](/imagenes/personajeVacio.jpg)
 
 ## Película vacía
-Si el usuario presiona el botón añadir pero esté no contiene datos, se le avisará de la siguiente forma.
+Si el usuario presiona el botón añadir pero este no contiene datos, se le avisará de la siguiente forma.
 
 ![Peticion1](/imagenes/películaVacía.jpg)
 
