@@ -10,8 +10,14 @@ __________________________
           - [Registrar para añadir películas](#registrar-para-añadir-películas)
           - [Campos vacíos en Login](#campos-vacíos-en-login)
           - [Usuario o contraseña incorrectos](#Usuario-o-contraseña-incorrectos)
+      - [Ventana Register](#Ventana-Register)
+          - [Campos vacíos en Register](#Campos-vacíos-en-Register)
+          - [Usuario ya logueado](Usuario-ya-logueado)
+          - [Contraseñas no coinciden](#Contraseñas-no-coinciden)
+          - [Añadir personaje](#Añadir-personaje)
+          - [Película vacía](#Película-vacía)
  
-
+  
 
 ## Introducción
 Esta es una aplicación que permite buscar el nombre de un personaje Disney. Una vez introducido el nombre nos mostrará la imagen correspondiente y el listado de películas.
@@ -71,6 +77,33 @@ Si por error el usuario introduce mal el nombre de usuario o la contraseña se l
 ![Peticion1](/imagenes/loginIncorrecto.jpg)
 
 ### Ventana Register
+
+### Campos vacíos en Register
+Tal y como hicimos en la ventana de Login, para poder registrarse, si el usuario presiona el botón de registro y los campos están vacíos aparecerá el siguiente error.
+
+![Peticion1](/imagenes/camposVacíoRegister.jpg)
+
+### Usuario ya logueado
+Si en la aplicación tenemos almacenado un nombre de usuario, si al registrarse introduce el mismo, aparecerá un mensaje advirtiendo.
+
+![Peticion1](/imagenes/usuarioExiste.jpg)
+
+### Contraseñas no coinciden
+El usuario una vez introduce la contraseña para confirmarla y le presiona el botón de registro al no estar las contraseñas bien introducidas se le proporcionará un aviso, como el mostrado a continuación
+
+![Peticion1](/imagenes/contraseñasNoCoinciden.jpg)
+
+## Añadir personaje
+Una vez estemos registrados y logueados, si queremos añadir una películas primero debemos introducir el nombre del personaje, si no aparecerá el siguiente error.
+
+![Peticion1](/imagenes/personajeVacio.jpg)
+
+## Película vacía
+Si el usuario presiona el botón añadir pero esté no contiene datos, se le avisará de la siguiente forma.
+
+![Peticion1](/imagenes/películaVacía.jpg)
+
+
 
 
 
