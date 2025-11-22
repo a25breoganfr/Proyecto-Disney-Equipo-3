@@ -3,8 +3,8 @@ __________________________
 # Índice
 - [Introducción](#introducción)
     - [Postman](#postman)
--[Manual Técnico](#Manual-técnico)
-    - [Requisitor](#requisitos)    
+-[Manual Técnico](#manual-técnico)
+    - [Requisitos](#requisitos)    
  
 
 
