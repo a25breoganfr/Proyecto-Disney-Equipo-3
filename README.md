@@ -48,7 +48,7 @@ Una vez registrado el usuario deverá introducir sus credenciales en la pestaña
 
 ![Peticion1](/imagenes/login.jpg)
 
-### Manejo de errores
+## Manejo de errores
 En la aplicación implementamos diferentes mensajes para indicarle al usuario si está haciendo algo mal, para poder hacer la interfaz más interactiva y entendible.
 
 ### Ventana Login
