@@ -29,5 +29,5 @@ Al abrir la apliación se nos mostrará una ventana tal y como dejo a continuaci
 
 Una vez dentro, el usuario deberá introducir el nombre del personaje, una vez le de al botón "Search" se mostrará automáticamente el nombre, la imagen y el listado de películas
 
-
+![Peticion1](/imagenes/character.jpg)
  
