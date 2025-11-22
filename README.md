@@ -61,4 +61,10 @@ Si el usuario no escribe ninguna credencial y presiona el botón para loguearse 
 
 ![Peticion1](/imagenes/camposVaciosLogin.jpg)
 
+### Usuario o contraseña incorrectos
+Si por error el usuario introduce mal el nombre de usuario o la contraseña se le comunicará de la siguiente forma.
+
+![Peticion1](/imagenes/loginIncorrecto.jpg)
+
+
 
