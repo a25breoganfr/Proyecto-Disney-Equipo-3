@@ -27,10 +27,12 @@ Al abrir la apliación se nos mostrará una ventana tal y como dejo a continuaci
 
  ![Peticion1](/imagenes/mainJFrame.jpg)
 
-Una vez dentro, el usuario deberá introducir el nombre del personaje, una vez le de al botón "Search" se mostrará automáticamente el nombre, la imagen y el listado de películas
+Una vez dentro, el usuario deberá introducir el nombre del personaje, una vez le de al botón "Search" se mostrará automáticamente el nombre, la imagen y el listado de películas.
 
 ![Peticion1](/imagenes/character.jpg)
  
 Si por error el usuario introduce un personaje que no existe, la aplicación mostrará dicho error.
 
 ![Peticion1](/imagenes/noExiste.jpg)
+
+Para poder añadir una película el usuario debe estar registrado, podrá hacerlo dandole al botón "Register" donde se le abrirá la siguiente ventana
