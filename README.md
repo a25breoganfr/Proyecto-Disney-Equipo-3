@@ -5,6 +5,7 @@ __________________________
   - [Postman](#postman) 
 - [Manual técnico](#manual-técnico)
 - [Manual de Usuario](#manual-de-usuario)
+  - [Manejo de Errores](#manejo-de-errores)
  
 
 
@@ -42,3 +43,5 @@ Para poder añadir una película el usuario debe estar registrado, podrá hacerl
 Una vez registrado el usuario deverá introducir sus credenciales en la pestaña de "login", para poder llegar allí deberá darle al botón correspondiente.
 
 ![Peticion1](/imagenes/login.jpg)
+
+### Manejo de errores
