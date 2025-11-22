@@ -46,3 +46,8 @@ Una vez registrado el usuario deverá introducir sus credenciales en la pestaña
 
 ### Manejo de errores
 En la aplicación implementamos diferentes mensajes para indicarle al usuario si está haciendo algo mal. Para poder hacer la interfaz más interactiva y entendible.
+
+La aplicación permite consultar la información de las películas sin estar resgistrado, sin embargo, a la hora de añadir deberá estar logueando, sino le saldrá un mensaje aclarando.
+
+![Peticion1](/imagenes/registrarParaPeliculas.jpg)
+
