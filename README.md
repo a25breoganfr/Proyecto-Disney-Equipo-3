@@ -129,6 +129,7 @@ Angel implementó el método de gestion de imágenes para el programa y ayudó e
 
 ## Mejoras
 De tener más tiempo haríamos del programa un buscador más cualificado:  
+
 -Añadiríamos búsqueda por ID además de por nombre.  
 -Desde el botón ADD se podría añadir además de películas, shorts, videojuegos y shows.  
 -Se mostrarían los aliados y enemigos de cada personaje.  
