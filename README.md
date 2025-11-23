@@ -141,9 +141,9 @@ Ha sido especialmente interesante y educativo aprender a manejar datos de una AP
 En conclusión este trabajo nos ha preparado notablemente para una futura entrega y para hacer una mejor gestión del trabajo en equipo de cara a las prácticas en empresa.
 
 ## Autores
-Breogán Fontenla Rosende
-Nerea Salgado Martínez
-Angel Gestoso Agrelo
+Breogán Fontenla Rosende  
+Nerea Salgado Martínez  
+Angel Gestoso Agrelo  
 
 
 
